@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/exploded-aar/com.shamanland/xdroid-core/0.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43d2d05483227ac2311d65919c56f4cb7efc3b20">
+        <dex dex="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.shamanland-xdroid-core-0.3.0_e7b735e91a64f61e6a05b038ca04a58ea49f44ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -79,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d65816b35f9c8209309bc07432a7aa2c1a8835e6">
+        sha1="3a12cec4516b790d3d29446aba0505e291c01d90">
         <dex dex="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_50c2b76c0b407fc7ab54cb9e5706f90daa3009c0/classes.dex" />
     </item>
     <item
@@ -223,8 +232,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5b7587b0460ccd53895be4e579beb6f34fcd77d8">
+        sha1="313b949ac402c2cea9135aecc7f5359681d672b4">
         <dex dex="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_610879d39b582e3a08fee069419feb0d4323b632/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/exploded-aar/com.shamanland/xdroid-toaster/0.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="375df071e6c70b68bd90dc3b9b8a4b95061d9778">
+        <dex dex="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.shamanland-xdroid-toaster-0.3.0_0bf597bf06aca5e7550b0bb6488fd05d7ca93dd9/classes.dex" />
     </item>
     <item
         is-multidex="true"
