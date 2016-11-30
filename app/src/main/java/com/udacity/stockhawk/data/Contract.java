@@ -4,6 +4,8 @@ package com.udacity.stockhawk.data;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
+import timber.log.Timber;
+
 public class Contract {
 
     public static final String AUTHORITY = "com.udacity.stockhawk";
@@ -43,6 +45,7 @@ public class Contract {
         };
 
         public static Uri makeUriForStock(String symbol) {
+            Timber.d("Build URI for : %s", symbol);
             return uri.buildUpon().appendPath(symbol).build();
         }
 

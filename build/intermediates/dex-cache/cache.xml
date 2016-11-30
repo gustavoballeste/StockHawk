@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="3a12cec4516b790d3d29446aba0505e291c01d90">
+        sha1="7b59ec27980f1a42e606db0b6b1355c3c212c3fd">
         <dex dex="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_50c2b76c0b407fc7ab54cb9e5706f90daa3009c0/classes.dex" />
     </item>
     <item
@@ -232,7 +232,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="313b949ac402c2cea9135aecc7f5359681d672b4">
+        sha1="8b41dfb50caf82479a7dcd9f89e8857d241fd29f">
         <dex dex="/Users/gustavoballeste/AndroidStudioProjects/StockHawk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_610879d39b582e3a08fee069419feb0d4323b632/classes.dex" />
     </item>
     <item
