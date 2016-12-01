@@ -43,11 +43,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @BindView(R.id.error)
     TextView error;
     private StockAdapter adapter;
+    private static final String SYMBOL = "symbol";
 
     @Override
     public void onClick(String symbol) {
         Intent intent = new Intent(this, DetailActivity.class)
                 .setData(Contract.Quote.makeUriForStock(symbol));
+        intent.putExtra(SYMBOL, symbol);
         startActivity(intent);
     }
 

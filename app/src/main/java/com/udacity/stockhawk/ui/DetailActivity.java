@@ -16,10 +16,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        //Iniciar a criação do chart
         if(savedInstanceState == null){
-            // Create the detail fragment and add it to the activity
-            // using a fragment transaction.
             Bundle arguments = new Bundle();
             arguments.putParcelable(DetailFragment.STOCK_URI, getIntent().getData());
             DetailFragment detailFragment = new DetailFragment();

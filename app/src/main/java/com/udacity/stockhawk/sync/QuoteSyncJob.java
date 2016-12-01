@@ -94,6 +94,7 @@ public final class QuoteSyncJob {
 
                     ContentValues quoteCV = new ContentValues();
                     quoteCV.put(Contract.Quote.COLUMN_SYMBOL, symbol);
+                    //buscar nome
                     quoteCV.put(Contract.Quote.COLUMN_PRICE, price);
                     quoteCV.put(Contract.Quote.COLUMN_PERCENTAGE_CHANGE, percentChange);
                     quoteCV.put(Contract.Quote.COLUMN_ABSOLUTE_CHANGE, change);

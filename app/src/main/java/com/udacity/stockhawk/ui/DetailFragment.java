@@ -1,5 +1,6 @@
 package com.udacity.stockhawk.ui;
 
+import android.app.Activity;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,6 +34,8 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
 
     static final String STOCK_URI = "STOCK_URI";
     private Uri mUri;
+    private static final String SYMBOL = "symbol";
+    private String symbolName;
     private static final int CHART_LOADER = 0;
     private static final String[] DETAIL_COLUMNS = {Contract.Quote.COLUMN_HISTORY};
     public static final int COL_HISTORY = 0;
@@ -40,12 +43,14 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     private String chartValues;
     private static final String CHART_VALUES_KEY = "CHART_VALUES_KEY";
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Bundle arguments = getArguments();
         if(arguments != null){
             mUri = arguments.getParcelable(DetailFragment.STOCK_URI);
+            symbolName = getActivity().getIntent().getExtras().getString(SYMBOL);
         }
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
         lineChart = (LineChart) rootView.findViewById(R.id.stock_chart);
@@ -54,6 +59,9 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
             chartValues = savedInstanceState.getString(CHART_VALUES_KEY);
             loadChart(chartValues);
         }
+        Activity activity = getActivity();
+        activity.setTitle(symbolName);
+
         return rootView;
     }
 
@@ -108,9 +116,9 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         ArrayList<String> labels = new ArrayList<>();
         for (int i=chartEntries.length-1; i>=0; i--) {
             String chartEntry = chartEntries[i];
-            String timeMilliSecondsStr = chartEntry.split(",")[0];
-            long timeInMilliSeconds = Long.parseLong(timeMilliSecondsStr);
-            String time = getMonth(timeInMilliSeconds);
+            String timeMilliSecStr = chartEntry.split(",")[0];
+            long timeInMilliSec = Long.parseLong(timeMilliSecStr);
+            String time = getMonth(timeInMilliSec);
             String value = chartEntry.split(",")[1];
             entries.add(new Entry( Float.parseFloat(value), chartEntries.length-i) );
             labels.add(time);
@@ -134,7 +142,6 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         lineChart.getAxisLeft().setTextColor(WHITE);
         lineChart.getAxisRight().setTextColor(WHITE);
         lineChart.setDescription("");
-
         lineChart.animateX(2500);
     }
 
