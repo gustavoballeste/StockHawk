@@ -58,6 +58,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
             chartValues = savedInstanceState.getString(CHART_VALUES_KEY);
             loadChart(chartValues);
         }
+
         Activity activity = getActivity();
         activity.setTitle(symbolName);
 
