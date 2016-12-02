@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         adapter = new StockAdapter(this, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setRefreshing(true);
         onRefresh();
@@ -82,9 +81,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 String symbol = adapter.getSymbolAtPosition(viewHolder.getAdapterPosition());
                 PrefUtils.removeStock(MainActivity.this, symbol);
                 getContentResolver().delete(Contract.Quote.makeUriForStock(symbol), null, null);
+                QuoteSyncJob.syncImmediately(getApplicationContext());
             }
         }).attachToRecyclerView(recyclerView);
-
 
     }
 
@@ -160,13 +159,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         adapter.setCursor(null);
     }
 
-
     private void setDisplayModeMenuItemIcon(MenuItem item) {
         if (PrefUtils.getDisplayMode(this)
                 .equals(getString(R.string.pref_display_mode_absolute_key))) {
             item.setIcon(R.drawable.ic_percentage);
+            item.setTitle(R.string.pref_display_mode_percentage_description);
         } else {
             item.setIcon(R.drawable.ic_dollar);
+            item.setTitle(R.string.pref_display_mode_absolute_description);
         }
     }
 

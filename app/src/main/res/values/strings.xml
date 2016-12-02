@@ -1,27 +1,29 @@
 <resources>
     <string name="app_name">Stock Hawk</string>
-    <string name="detail_label" translatable="true">Chart</string>
+    <string name="detail_label">Chart</string>
 
     <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
 
-    <string name="pref_stocks_key">stocks</string>
+    <string name="pref_stocks_key" translatable="false">stocks</string>
 
     <string name="chart_no_data">No data</string>
 
     <string name="pref_display_mode_title">Display Mode</string>
-    <string name="pref_display_mode_key">displayMode</string>
-    <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
+    <string name="pref_display_mode_key" translatable="false">displayMode</string>
+    <string name="pref_display_mode_default" translatable="false">@string/pref_display_mode_percentage_key</string>
 
-    <string name="pref_display_mode_absolute_key">absolute</string>
-    <string name="pref_display_mode_percentage_key">percentage</string>
+    <string name="pref_display_mode_absolute_key" translatable="false">absolute</string>
+    <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
+    <string name="pref_display_mode_absolute_description">dollar</string>
+    <string name="pref_display_mode_percentage_description">percentage</string>
 
-    <string name="default_stocks_yahoo">YHOO</string>
-    <string name="default_stocks_apple">AAPL</string>
-    <string name="default_stocks_microsoft">MSFT</string>
-    <string name="default_stocks_facebook">FB</string>
+    <string name="default_stocks_yahoo" translatable="false">YHOO</string>
+    <string name="default_stocks_apple" translatable="false">AAPL</string>
+    <string name="default_stocks_microsoft" translatable="false">MSFT</string>
+    <string name="default_stocks_facebook" translatable="false">FB</string>
 
 
-    <string name="action_change_units">@string/pref_display_mode_key</string>
+    <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
 
 
     <string name="dialog_title">Add Stock</string>
@@ -32,12 +34,17 @@
     <string name="error_stock_not_found">Symbol %s is invalid!</string>
     <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
     <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
+    <string name="error_default">No Stock Information Available</string>
 
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
 
-    <string name="chartYAxis" translatable="true">Stock Values</string>
-    <string name="chartDescription" translatable="true">Chart</string>
-    <string name="title_widget_detail" translatable="true">Stock Hawk Details</string>
+    <string name="chartYAxis">Stock Values</string>
+    <string name="chartDescription">Chart</string>
+    <string name="title_widget_detail">Stock Hawk Details</string>
+
+    <string name="add_stock_button_desc">Adding stock</string>
+    <string name="stock_increase_desc">Up by</string>
+    <string name="stock_decrease_desc">Down by</string>
 
 </resources>

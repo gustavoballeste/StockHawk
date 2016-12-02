@@ -12,4 +12,6 @@
 
     <color name="chart_yellow">#EEFF41</color>
 
+    <color name="dark_background">#333333</color>
+
 </resources>

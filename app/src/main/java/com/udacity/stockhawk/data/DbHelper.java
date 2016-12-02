@@ -6,13 +6,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.udacity.stockhawk.data.Contract.Quote;
 
-
 public class DbHelper extends SQLiteOpenHelper {
-
 
     static final String NAME = "StockHawk.db";
     private static final int VERSION = 1;
-
 
     public DbHelper(Context context) {
         super(context, NAME, null, VERSION);
@@ -30,14 +27,12 @@ public class DbHelper extends SQLiteOpenHelper {
                 "UNIQUE (" + Quote.COLUMN_SYMBOL + ") ON CONFLICT REPLACE);";
 
         db.execSQL(builder);
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
         db.execSQL(" DROP TABLE IF EXISTS " + Quote.TABLE_NAME);
-
         onCreate(db);
     }
+
 }

@@ -18,7 +18,6 @@ import com.udacity.stockhawk.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 public class AddStockDialog extends DialogFragment {
 
     @BindView(R.id.dialog_stock)
@@ -28,10 +27,8 @@ public class AddStockDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
         LayoutInflater inflater = LayoutInflater.from(getActivity());
         View custom = inflater.inflate(R.layout.add_stock_dialog, null);
-
         ButterKnife.bind(this, custom);
 
         stock.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -42,7 +39,6 @@ public class AddStockDialog extends DialogFragment {
             }
         });
         builder.setView(custom);
-
         builder.setMessage(getString(R.string.dialog_title));
         builder.setPositiveButton(getString(R.string.dialog_add),
                 new DialogInterface.OnClickListener() {
@@ -64,6 +60,5 @@ public class AddStockDialog extends DialogFragment {
         }
         dismissAllowingStateLoss();
     }
-
 
 }

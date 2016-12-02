@@ -43,7 +43,6 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     private String chartValues;
     private static final String CHART_VALUES_KEY = "CHART_VALUES_KEY";
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -71,7 +70,6 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         super.onActivityCreated(savedInstanceState);
     }
 
-
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -95,7 +93,6 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         return null;
     }
 
-
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         if(data != null && data.moveToNext()){
@@ -110,7 +107,6 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
     }
 
     private void loadChart(String values){
-
         String chartEntries[] = values.split("\\r?\\n");
         ArrayList<Entry> entries = new ArrayList<>();
         ArrayList<String> labels = new ArrayList<>();
