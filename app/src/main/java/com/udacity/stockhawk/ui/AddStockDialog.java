@@ -38,6 +38,7 @@ public class AddStockDialog extends DialogFragment {
                 return true;
             }
         });
+
         builder.setView(custom);
         builder.setMessage(getString(R.string.dialog_title));
         builder.setPositiveButton(getString(R.string.dialog_add),
@@ -50,6 +51,7 @@ public class AddStockDialog extends DialogFragment {
 
         Dialog dialog = builder.create();
         dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        dialog.getWindow().setBackgroundDrawableResource(R.color.dialog_background);
         return dialog;
     }
 
