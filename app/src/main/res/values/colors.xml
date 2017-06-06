@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#2196F3</color>
 
+    <color name="dark_background">#121212</color>
+    <color name="dialog_background">#1e1e1e</color>
 
     <color name="material_blue_700">#1976D2</color>
     <color name="material_blue_500">#2196F3</color>
@@ -12,6 +14,6 @@
 
     <color name="chart_yellow">#EEFF41</color>
 
-    <color name="dark_background">#333333</color>
+
 
 </resources>
